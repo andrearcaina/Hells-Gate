@@ -1,6 +1,6 @@
 ![icon](https://github.com/andrearcaina/Hells-Gate/blob/main/Images/header.png)
 
-# Hell's Gate: The Invasion
+# Hell's Gate: Knights of the Abyss
 ### ```VERSION``` ###
 Pre-Alpha 0.01 | 2023-05-01
 
