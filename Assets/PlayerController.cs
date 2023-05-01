@@ -8,12 +8,11 @@ public class PlayerController : MonoBehaviour
     public Camera sceneCamera;
     public Rigidbody2D body;
 
-    // this is the script for the weapon
+    // referencing the script for the weapon
     public Weapon weapon;
 
     // this is the movement and the mouse position
     private Vector2 moveDirection;
-
     private Vector2 mousePosition;
 
     // this is x and y
@@ -68,6 +67,7 @@ public class PlayerController : MonoBehaviour
 
         // this is so that the player looks at the mouse
         Vector2 lookDirection = mousePosition - body.position;
+        // calculate angle to rotate the player
         float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
         body.rotation = angle;
     }
