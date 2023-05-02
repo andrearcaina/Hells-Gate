@@ -8,8 +8,8 @@ public class SpawningSystem : MonoBehaviour
     public float radius;
     public float interval;
     public GameObject Player;
-    float timer;
-    Vector3 bufferRadius = new Vector3(10,10,10);
+    public float timer;
+    public Vector3 bufferRadius = new Vector3(10,10,10);
     // Start is called before the first frame update
     void Start()
     {

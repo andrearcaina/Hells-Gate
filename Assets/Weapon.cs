@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     public void FireBullet()
     {
         GameObject projectile = Instantiate(getBulletPrefab(), getFirePoint().position, getFirePoint().rotation);
-        projectile.GetComponent<Rigidbody2D>().AddForce(getFirePoint().up * fireForce, ForceMode2D.Impulse);
+        projectile.GetComponent<Rigidbody2D>().AddForce(getFirePoint().up * getFireForce(), ForceMode2D.Impulse);
     }
 
     public GameObject getBulletPrefab()
@@ -22,5 +22,10 @@ public class Weapon : MonoBehaviour
     public Transform getFirePoint()
     {
         return firePoint;
+    }
+
+    public float getFireForce()
+    {
+        return fireForce;
     }
 }
