@@ -16,13 +16,11 @@ public class Weapon : MonoBehaviour
 
     public GameObject getBulletPrefab()
     {
-        bulletPrefab = GameObject.Find("Bullet").GetComponent<GameObject>();
         return bulletPrefab;
     }
 
     public Transform getFirePoint()
     {
-        firePoint = GameObject.Find("FirePoint").GetComponent<Transform>();
         return firePoint;
     }
 }
