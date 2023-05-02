@@ -26,7 +26,7 @@ public class SpawningSystem : MonoBehaviour
         {
             // spawn the object, then reset timer
             SpawnObject();
-            timer = 0;
+            timer -= interval; // this is more efficient than setting the timer to 0
         }
     }
 
