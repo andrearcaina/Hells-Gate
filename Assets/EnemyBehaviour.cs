@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public Transform Target;
+    private Transform Target;
+    private GameObject player;
     public float speed;
     public float health;
 
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        Target = player.transform;
+    }
     // Update is called once per frame
     void Update()
     {
