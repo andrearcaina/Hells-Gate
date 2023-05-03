@@ -537,10 +537,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4138514798335496411, guid: 5f65311fc2205b34790db36178e1b24a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5730596723257300986, guid: 5f65311fc2205b34790db36178e1b24a, type: 3}
       propertyPath: Target
       value: 
       objectReference: {fileID: 777275501}
+    - target: {fileID: 5730596723257300986, guid: 5f65311fc2205b34790db36178e1b24a, type: 3}
+      propertyPath: health
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f65311fc2205b34790db36178e1b24a, type: 3}
 --- !u!4 &1819026062 stripped
@@ -597,3 +605,5 @@ MonoBehaviour:
   radius: 6
   interval: 2
   Player: {fileID: 777275499}
+  timer: 0
+  bufferRadius: {x: 10, y: 10, z: 10}

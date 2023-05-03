@@ -6,6 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public Transform Target;
     public float speed;
+    public float health;
 
     // Update is called once per frame
     void Update()
@@ -14,5 +15,14 @@ public class EnemyBehaviour : MonoBehaviour
         float step = speed * Time.deltaTime;
         // Move the current position closer to the target by step amount
         transform.position = Vector3.MoveTowards(transform.position, Target.position, step);
+    }
+
+    public void takeDamage(float amount)
+    {
+        health -= amount;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
