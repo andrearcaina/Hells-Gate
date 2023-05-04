@@ -48,11 +48,11 @@ public class DungeonGenerator : MonoBehaviour
         
         for (int i = 0; i < iterations; i++)
         {
-            // get a random walk
-            HashSet<Vector2Int> path = ProceduralGeneration.RandomWalk(currentPosition, walkLength);
+            // this will generate a random walk
+            ProceduralGeneration.RandomWalk(currentPosition, walkLength);
 
             // add the walk to the floor positions
-            floorPositions.UnionWith(path);
+            floorPositions.UnionWith(ProceduralGeneration.GetPath());
 
             if (randomIterations)
             {
