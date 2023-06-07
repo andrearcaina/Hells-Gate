@@ -11,7 +11,6 @@ However, it soon becomes clear that the demons are being led by the Seven Kings.
 To save your kingdom and restore order, you must defeat these kings and drive back the demonic horde.
 
 ### ```GAMEPLAY``` ###
-Knights of the Abyss is a fast-paced, action-packed roguelike shoot 'em up that puts players\
+Knights of the Abyss is a fast-paced, action-packed roguelike shoot 'em up with rpg elements that puts players\
 in the role of a medieval knight fighting back against the demon horde. Players must defeat multiple\
-hordes of demons and other enemies, while collecting weapons, gold and power-ups to strengthen themselves.\
-Each level culminates in a final boss battle against a powerful demon lord.
+waves of enemies, while collecting gold, power-ups and secret unlockable magic within the game.\ 
