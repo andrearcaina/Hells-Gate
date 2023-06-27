@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 6922a499a3eec994c9b20588a6cfd3cd, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -591,11 +591,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 777275499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33da2ded4c4368c48a1bf8381f596cce, type: 3}
+  m_Script: {fileID: 11500000, guid: db9a544a1cbe1484395b98810841298d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 11400000, guid: 2b0bc878b6bee3442abc80ccc45a556d, type: 2}
-  tilePlacementRange: 10
+  tile: {fileID: 11400000, guid: 89158e2c3aa4f1742984ccf9e76f4393, type: 2}
+  tilePlacementRange: 25
   tilemap: {fileID: 1252689961}
 --- !u!1 &1024071086
 GameObject:
@@ -725,7 +725,7 @@ Transform:
   m_GameObject: {fileID: 1252689958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.67, y: 0.67, z: 0.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 184335869}
@@ -841,7 +841,7 @@ Tilemap:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -18, y: -2, z: 0}
   m_Size: {x: 29, y: 13, z: 1}
-  m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
+  m_TileAnchor: {x: 0, y: 0, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
     e00: 1

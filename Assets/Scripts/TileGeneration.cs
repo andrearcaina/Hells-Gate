@@ -35,13 +35,24 @@ public class TileGeneration : MonoBehaviour
     // check if there are tiles within a range of the player
     private bool checkForTiles(Vector3 position)
     {
+        // None of this works since tiles in tilemaps don't have a type (I think)
+        // Instead, we should be trying to look at the point in the tile map to see if they contain something,
+        // then checking the points in the camera area to see if the points match, which will tell us if there is something there
+        // I think then we can put tiles/take them away if they are a certain offset of the camera view
+        // You can translate cellspace in a tilemap to worldspace using tilemap.CellToWorld()
+        // You can translate worldspace to screen space (camera view) with Camera.main.WorldToScreenPoint()
+        // Compare the points in this area somehow with the camera view.
+
+        
         // check a sphere around the player for existing tiles
         Collider[] hitColliders = Physics.OverlapSphere(position, tilePlacementRange);
         foreach (var hitCollider in hitColliders)
         {
+            print(hitCollider.name);
             // if some collider is a tile, return true
             if (hitCollider.GetType() == tile.GetType())
             {
+                print(hitCollider.name);
                 return true;
             }
         }
