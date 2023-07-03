@@ -13,4 +13,4 @@ To save your kingdom and restore order, you must defeat these kings and drive ba
 ### ```GAMEPLAY``` ###
 Knights of the Abyss is a fast-paced, action-packed roguelike shoot 'em up with rpg elements that puts players\
 in the role of a medieval knight fighting back against the demon horde. Players must defeat multiple\
-waves of enemies, while collecting gold, power-ups and secret unlockable magic within the game.\ 
+waves of enemies, while collecting gold, power-ups and secret unlockable magic within the game. 
