@@ -22,11 +22,17 @@ public class PlayerController : MonoBehaviour
     // this is the speed limiter and the run speed
     public float speedLimiter = 0.7f;
     public float runSpeed = 20.0f;
+
+    // this is the shoot interval
+    public float shootInterval = 2.0f;
     
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        
+        // game loop
+        InvokeRepeating("ShootAtEnemy", 0, shootInterval);
     }
 
     // Update is called once per frame
@@ -39,6 +45,41 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate() 
     {
         Move();
+    }
+
+    private void ShootAtEnemy()
+    {
+        // gets all the enemies in the scene
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        // initialize the closest enemy and the closest distance
+        GameObject closestEnemy = null;
+        float closestDistance = Mathf.Infinity;
+
+        // find the closest enemy
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distance < closestDistance)
+            {
+                closestEnemy = enemy; // this is the new closest enemy
+                closestDistance = distance; // this is the new closest distance (to keep track of the closest enemy)
+            }
+        }
+
+        // shoot at the enemy if there is one
+        if (closestEnemy != null)
+        {
+            // rotate the player to face the enemy
+            Vector3 lookDirection = closestEnemy.transform.position - transform.position;
+            float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
+
+            // this is the rotation of the player
+            Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = rotation;
+
+            // this is the shooting of bullet
+            weapon.FireBullet();
+        }
     }
 
     // process inputs
@@ -64,12 +105,6 @@ public class PlayerController : MonoBehaviour
     {
         // this is the actual movement with runSpeed modifiers
         body.velocity = new Vector2(moveDirection.x * runSpeed, moveDirection.y * runSpeed);
-
-        // this is so that the player looks at the mouse
-        Vector2 lookDirection = mousePosition - body.position;
-        // calculate angle to rotate the player
-        float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
-        body.rotation = angle;
     }
 
     // collision detection
